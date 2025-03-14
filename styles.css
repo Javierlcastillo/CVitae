@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1c2628;
+}
+.welcome {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    /* background-color: #f1f7f6; */
+}
+.welcome header{
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+.welcome h1 {
+    color: #f1f7f6;
+    font-size: 3rem;
+    text-align: center;
+    
+}
