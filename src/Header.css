@@ -1,0 +1,23 @@
+.navbar > .container {
+    position: relative;
+    width: 50%;
+    right: 50px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin-left: 0;
+}
+
+.nombre {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#Javier, #LuisCastillo {
+    margin: 0;
+}
