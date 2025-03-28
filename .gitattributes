@@ -1,0 +1,16 @@
+# Forzar finales de línea LF para todos los archivos de texto
+* text=auto
+
+# Archivos específicos que siempre deben usar LF
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Archivos binarios (no convertir finales de línea)
+*.png binary
+*.jpg binary
+*.svg binary
+*.ico binary
