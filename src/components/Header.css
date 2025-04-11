@@ -3,32 +3,52 @@
 }
 
 .menu.show {
-    position: relative;
-    width: 50%;
-    justify-content: space-between;
-    gap: 10px;
     display: flex;
-    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-right: 5%;
+    flex-grow: 1;
 }
 
 .navbar {
     position: fixed;
-    width: 100%;
+    display: flex;
     justify-content: space-between;
+    width: 100%;
     padding-top: 30px;
     margin-left: 0;
-    display: flex;
+    
 }
 
 .nombre {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
+    flex-grow: 0;
+    opacity: 0.9;
+}
+.nombre img{
+    width: 45px;
+    height: 45px;
+}
+.nombre:hover{
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-#Javier, #LuisCastillo {
-    margin: 0;
+#Javier{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #2cc295;
 }
+#LuisCastillo{
+    font-weight: 500;
+    font-size: 1.9rem;
+    color: #F1F7F6;
+}
+
 
 .navbar-toggler { 
     display: block;
@@ -37,3 +57,38 @@
     z-index: 2;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+   .nombre {
+        gap: 2px;
+    }
+   .nombre img{
+        width: 35px;
+        height: 35px;
+   }
+   #Javier{
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: #2cc295;
+    }
+    #LuisCastillo{
+        font-weight: 500;
+        font-size: 1.23rem;
+        color: #F1F7F6;
+    }
+} 

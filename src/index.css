@@ -1,6 +1,8 @@
 body, html {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
     background-color: #1c2628;
+    color: black;
 }
 .welcome {
     display: flex;
