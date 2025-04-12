@@ -2,31 +2,21 @@ import React, {use, useState, useEffect} from "react";
 import codeLogo from "../assets/code-logo.svg";
 import "./Header.css";
 import useWindowSize from "../hooks/useWindowSize";
+import Menu from "./Menu.jsx";
 
 function Header() {
     // utilizacion del hook para la responsividad
     const { width } = useWindowSize();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [bigScreen, setBigScreen] = useState(width > 768);
+    const [menuOpen, setMenuOpen] = useState(true);
 
     const toggleMenu = () => {
-        console.log("Menu toggled", !isMenuOpen);
-        setIsMenuOpen(!isMenuOpen);
+        console.log("Menu toggled", !menuOpen);
+        setMenuOpen(!menuOpen);
     };
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setIsMenuOpen(false);
-            } else {
-                setIsMenuOpen(true);
-            }
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-        
-    },[]);
+        setBigScreen(width > 768);
+    }, [width]);
     return (
         <div className="nav-container" height={50}>
             <nav className="navbar navbar-light sticky-top">
@@ -37,7 +27,7 @@ function Header() {
                 <a  id="Javier" href="/">Javier</a>
                 <a  id="LuisCastillo" href="/">Luis Castillo</a>
                 </div>
-                <div className={`menu ${isMenuOpen ? "show" : ""} `}>
+                <div className={`menu ${bigScreen ? "show" : ""} `}>
                     <a className="navbar-text navbar-link" href="#">Home <span className="sr-only">(current)</span></a>
                     <a className="navbar-text navbar-link" href="#">Features</a>
                     <a className="navbar-text navbar-link" href="#">Pricing</a>
@@ -49,8 +39,9 @@ function Header() {
                 </button>
                 )}
             </nav>
+            <Menu bigScreen={bigScreen} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         </div>
     );
-}
+} 
 
 export default Header;
