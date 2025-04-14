@@ -3,22 +3,8 @@ body, html {
     font-weight: 400;
     background-color: #1c2628;
     color: black;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
-.welcome {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: 10%;
-    
-    /* background-color: #f1f7f6; */
-}
-.welcome header{
-    flex-direction: column;
-    text-align: center;
-}
-.welcome h1 {
-    color: #f1f7f6;
-    font-size: 3rem;
-    text-align: center;
-    
-}
+
