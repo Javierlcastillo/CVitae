@@ -6,6 +6,7 @@ import Menu from "./Menu.jsx";
 import { IoReorderThreeOutline as Options } from "react-icons/io5";
 import menuItems from "./menuItems.js";
 import { useLocation, Link} from "react-router-dom";
+import Breadcrumbs from "./BreadCrumbs.jsx";
 
 
 function Header() {
@@ -44,6 +45,7 @@ function Header() {
                     <Options size={30} color="#f1f7f6"/>
                 </button>
                 )}
+                <Breadcrumbs/>
             </nav>
             <Menu bigScreen={bigScreen} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         </div>

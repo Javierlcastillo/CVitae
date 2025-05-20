@@ -1,0 +1,28 @@
+.breadcrumbs{
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    z-index: 10;
+}
+
+ 
+.breadcrumbs ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+  }
+  
+  .breadcrumbs li::after {
+    content: "/";
+    margin: 0 4px;
+  }
+  
+  .breadcrumbs li:last-child::after {
+    content: "";
+  }
+  
+@media screen and (max-width: 768px){
+    .breadcrumbs{
+        top: 55px;
+    }
+}

@@ -1,0 +1,37 @@
+.container.home-container {
+    background-color: #08211a;
+}
+.introduction-grid {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.home-punchline {
+    grid-row: 7 / -1;
+    grid-column: 1 / -1; /* Ocupa de la columna 2 a la 8 */
+    font-size: 4rem;
+    font-weight: 400;
+    color: #F1F7F6;
+}
+
+.home-description {
+    grid-column: 5 / 11; /* Ocupa de la columna 2 a la 8 */
+    grid-row: 4 / span 2;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #F1F7F6;
+}
+
+#foto-perfil{
+    width: 330px;
+    height: 400px;
+    grid-area: 1 / 1 / span 4 / span 3;
+}
+
+.highlight {
+    color: #2cc295;
+    font-weight: 500;
+}

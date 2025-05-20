@@ -13,14 +13,16 @@ function Menu({bigScreen, menuOpen, setMenuOpen}) {
     }, [bigScreen]);
     return (
         <div className="menu-container">
-            <div className={`socials ${bigScreen ? "full" : "hidden"}`}>
+            <div className={`socials full`}>
                 <p className="text"> Follow Me ────── </p>
-                <a href="https://www.linkedin.com/in/javierluiscastillosolorzano" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin size={45} color="#2cc295"/>
-                </a>
-                <a href="https://www.instagram.com/javier_lcastillo/" target="_blank" rel="noopener noreferrer"> 
-                <FaSquareInstagram size={45} color="#2cc295"/>
-                </a>
+                <div className="socials-icons">
+                    <a href="https://www.linkedin.com/in/javierluiscastillosolorzano" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={bigScreen? 45 : 30} color="#2cc295"/>
+                    </a>
+                    <a href="https://www.instagram.com/javier_lcastillo/" target="_blank" rel="noopener noreferrer"> 
+                    <FaSquareInstagram size={bigScreen? 45 : 30} color="#2cc295"/>
+                    </a>
+                </div>
             </div>
             <div className={`side-menu ${menuOpen ? "show" : ""}`}>
                 <button className="close" onClick={() => setMenuOpen(false)}>

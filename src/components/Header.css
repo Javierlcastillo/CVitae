@@ -30,8 +30,12 @@
     padding-top: 10px;
     margin-left: 0;
     padding-left: 8px;
+    background-color: #1c2628;    
+}
 
-    
+.breadcrumbs {
+    position: absolute;
+    z-index: 1000;
 }
 
 .nombre {
@@ -71,11 +75,13 @@
 }
 
 .nav-container {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: auto;
     /*la altura del container es de 88px*/
 }
+
 
 a {
     color: inherit;

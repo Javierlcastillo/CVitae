@@ -8,3 +8,7 @@ body, html {
     height: 100%;
 }
 
+a:hover{
+    color: #2cc295;
+}
+
