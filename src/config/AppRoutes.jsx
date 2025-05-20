@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home.jsx";
-import Portfolio from "./Portfolio.jsx";
-import Profile from "./Profile.jsx";
-import Contact from "./Contact.jsx";
+import Home from "../pages/Home.jsx";
+import Portfolio from "../pages/Portfolio.jsx";
+import Profile from "../pages/Profile.jsx";
+import Contact from "../pages/Contact.jsx";
 
 function AppRoutes() {
     return (

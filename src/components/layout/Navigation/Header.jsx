@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import codeLogo from "../assets/code-logo.svg";
 import "./Header.css";
-import useWindowSize from "../hooks/useWindowSize";
-import Menu from "./Menu.jsx";
+import useWindowSize from "../../../hooks/useWindowSize.jsx";
+import Menu from "../../Menu.jsx";
 import { IoReorderThreeOutline as Options } from "react-icons/io5";
 import menuItems from "./menuItems.js";
 import { useLocation, Link} from "react-router-dom";
-import Breadcrumbs from "./BreadCrumbs.jsx";
+import Breadcrumbs from "./BreadCrumbs.js";
 
 
 function Header() {
