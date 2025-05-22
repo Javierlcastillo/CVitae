@@ -1,9 +1,17 @@
+
 .breadcrumbs{
     position: fixed;
     top: 60px;
     left: 20px;
     z-index: 10;
+    /* width: 100%; */
+    margin-bottom: 0px;
 }
+.home-link:hover{
+    text-decoration: underline;
+    color: #1c2628;
+}
+
 
  
 .breadcrumbs ul {

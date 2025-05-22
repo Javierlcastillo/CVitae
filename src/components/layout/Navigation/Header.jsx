@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import codeLogo from "../assets/code-logo.svg";
+import codeLogo from "@/assets/icons/code-logo.svg";
 import "./Header.css";
-import useWindowSize from "../../../hooks/useWindowSize.jsx";
-import Menu from "../../Menu.jsx";
+import useWindowSize from "@/hooks/useWindowSize.jsx";
+import Menu from "@/components/layout/Navigation/Menu.jsx";
 import { IoReorderThreeOutline as Options } from "react-icons/io5";
 import menuItems from "./menuItems.js";
 import { useLocation, Link} from "react-router-dom";
-import Breadcrumbs from "./BreadCrumbs.js";
+import Breadcrumbs from "@/components/layout/Breadcrumbs/BreadCrumbs.jsx";
 
 
 function Header() {
@@ -45,7 +45,9 @@ function Header() {
                     <Options size={30} color="#f1f7f6"/>
                 </button>
                 )}
+                <div className="breadcrumbs-container">
                 <Breadcrumbs/>
+                </div>
             </nav>
             <Menu bigScreen={bigScreen} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         </div>

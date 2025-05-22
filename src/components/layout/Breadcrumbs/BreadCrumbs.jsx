@@ -10,7 +10,7 @@ function Breadcrumbs() {
   return (
     <nav className="breadcrumbs">
       <ul>
-        <li><Link to="/" className="link">Home</Link></li>
+        <li><Link to="/" className="home-link">Home</Link></li>
         {pathnames.map((value, index) => {
           const to = "/" + pathnames.slice(0, index + 1).join("/");
           const isLast = index === pathnames.length - 1;

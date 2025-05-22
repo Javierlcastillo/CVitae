@@ -79,6 +79,7 @@
     display: flex;
     justify-content: space-between;
     width: auto;
+    z-index: 1000000000;
     /*la altura del container es de 88px*/
 }
 
@@ -103,6 +104,12 @@ a:hover {
     &:focus{
         outline: none;
     }
+}
+.breadcrumbs-container {
+  width: 100vw;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #2cc295;
 }
 
 @media screen and (max-width: 768px) {

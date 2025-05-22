@@ -1,6 +1,6 @@
 import './App.css'
-import Header from './components/Header'
-import AppRoutes from './pages/AppRoutes.jsx'
+import Header from '@/components/layout/Navigation/Header'
+import AppRoutes from '@/config/AppRoutes.jsx'
 
 function App() {
   return (
