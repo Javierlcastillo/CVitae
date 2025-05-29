@@ -3,30 +3,30 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CuadradoSVG from "@/assets/icons/square-solid.svg?react";
+import Cubo from "@/assets/icons/cubo.svg?react";
 gsap.registerPlugin(ScrollTrigger);
 
-function CuadroAnimado({ inputDuration = 2, inputRotation = 360 }) {
+function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , startY = "80", startOffset = "0" }) {
     const svgRef = useRef();
 
     useGSAP(() => {
         gsap.to(svgRef.current, {
-            y: "-80vh",
+            y: `-${startY}vh`,
             rotation: inputRotation,
-            duration: inputDuration,
+            duration: 1,
             scrollTrigger: {
                 trigger: ".introduction-grid",
-                start: "2% top",
-                endTrigger: svgRef.current,
+                start: `2${+ startOffset}px top`,
+                endTrigger: ".animation-up",
                 end: "top 40%",
-                pin: ".introduction-grid",
                 toggleActions: "play complete reverse reverse",
-                scrub: 3, // Si quieres animación reversible con scroll
+                scrub: inputScrub,
             }
         });
-    }, [inputDuration, inputRotation]);
+    }, [inputScrub, inputRotation, inputSize, startY]);
 
     return (
-        <CuadradoSVG className='cuadro-animado' ref={svgRef} />
+        <Cubo className='cuadro-animado' ref={svgRef} style={{width: inputSize, height: inputSize}} />
     );
 }
 
