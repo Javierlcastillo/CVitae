@@ -2,36 +2,10 @@ import React, { useState, useEffect } from "react";
 import useWindowSize from "@/hooks/useWindowSize.jsx";
 import "./Home.css";
 import imagen from "@/assets/images/yo.jpg";
+import CuadroAnimado from "@/components/ui/CuadroAnimado";
 
-//Elements for animations
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CuadradoSVG from "@/assets/icons/square-solid.svg?react";
-gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
-    // GSAP animation setup
-    const container =  useRef();
-    useGSAP(() => {
-        const tl =  gsap.timeline({
-            scrollTrigger: {
-                trigger: '.introduction-grid',
-                start: '2% top',
-                endTrigger: '.animation-up',
-                end: 'top 40%',
-                pin: '.introduction-grid',
-                toggleActions: 'play complete reverse reverse',
-            }
-        });
-        tl.to('.cuadrado-animado', {
-            y: '-80vh',
-            rotation: 360,
-            ease: 'none',
-            duration: 2,            
-        });
-    }, []);
 
     const { width } = useWindowSize();
     const getScreenSize = (width) => {
@@ -53,7 +27,7 @@ function Home() {
                 <p className={`home-description ${screenSize}`} >Hi, I’m <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
             </div>
             <div className="animation-up">
-                <CuadradoSVG className="cuadrado-animado" />
+                <CuadroAnimado inputRotation={540} inputDuration={4}/>
             </div>
         </div>
     );

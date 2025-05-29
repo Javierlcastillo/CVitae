@@ -1,12 +1,11 @@
 .home-container {
-    /* padding-top: 88px; */
+    padding-top: 88px;
     margin-left: 40px;
     margin-right: 30px;
     min-height: 200vh;
 }
 .introduction-grid {
     display: grid;
-    top: 100px;
     width: 100%;
     height: calc(80vh - 100px);
     grid-template-columns: repeat(10, 1fr);
