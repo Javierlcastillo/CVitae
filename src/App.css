@@ -6,4 +6,11 @@
 .container{
   padding-top: 80px;
   padding-left: 50px;
+} 
+
+.page-container {
+  padding-top: 88px;
+  margin-left: 40px;
+  margin-right: 30px;
+  min-height: 200vh;
 }

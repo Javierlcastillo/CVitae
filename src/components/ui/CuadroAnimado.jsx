@@ -17,7 +17,7 @@ function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , s
             duration: 1,
             scrollTrigger: {
                 trigger: ".introduction-grid",
-                start: `2px top`,
+                start: `5px top`,
                 endTrigger: ".animation-up",
                 end: "top 40%",
                 toggleActions: "play complete reverse reverse",
@@ -30,5 +30,4 @@ function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , s
         <Cubo className='cuadro-animado' ref={svgRef} style={{width: inputSize, height: inputSize}} />
     );
 }
-
 export default CuadroAnimado;

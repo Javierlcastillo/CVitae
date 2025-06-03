@@ -70,6 +70,10 @@
     animation: flecha-bounce 1.5s infinite;
 }
 
+.spacer {
+    height: 20px;
+}
+
 .flecha-hide {
     position: relative;
     display: flex;
@@ -77,7 +81,7 @@
     align-items: center;
     justify-content: top;
     grid-row: 9;
-    grid-column: -2;
+    grid-column: -2/span 2;
     width: 150px;
     height: 150px;
     opacity: 0;

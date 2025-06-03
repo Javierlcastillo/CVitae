@@ -56,19 +56,27 @@ function Home() {
     // Utilidad para generar valores aleatorios dentro de un rango
     const randomInRange = (min, max) => Math.random() * (max - min) + min;
 
-    // Genera un array de objetos con parámetros aleatorios para CuadroAnimado
-    const cuadros = Array.from({ length: 12 }, () => ({
-        inputScrub: randomInRange(1, 8),
-        inputRotation: randomInRange(100, 600),
-        inputSize: tamanoCuadro(randomInRange(40, 90), width),
-        startY: randomInRange(20, 120)
-    }));
+    // Configuración predefinida para los cuadros animados
+    const cuadrosConfig = [
+        { inputScrub: 1, inputRotation: 120, inputSize: tamanoCuadro(60, width), startY: 30 },
+        { inputScrub: 2, inputRotation: 180, inputSize: tamanoCuadro(75, width), startY: 45 },
+        { inputScrub: 3, inputRotation: 240, inputSize: tamanoCuadro(50, width), startY: 60 },
+        { inputScrub: 2, inputRotation: 150, inputSize: tamanoCuadro(85, width), startY: 75 },
+        { inputScrub: 1, inputRotation: 200, inputSize: tamanoCuadro(70, width), startY: 90 },
+        { inputScrub: 3, inputRotation: 160, inputSize: tamanoCuadro(55, width), startY: 40 },
+        { inputScrub: 2, inputRotation: 220, inputSize: tamanoCuadro(80, width), startY: 55 },
+        { inputScrub: 1, inputRotation: 190, inputSize: tamanoCuadro(65, width), startY: 70 },
+        { inputScrub: 3, inputRotation: 170, inputSize: tamanoCuadro(45, width), startY: 85 },
+        { inputScrub: 2, inputRotation: 230, inputSize: tamanoCuadro(90, width), startY: 50 },
+        { inputScrub: 1, inputRotation: 140, inputSize: tamanoCuadro(75, width), startY: 65 },
+        { inputScrub: 3, inputRotation: 210, inputSize: tamanoCuadro(70, width), startY: 80 }
+    ];
 
     const [hideFlecha, setHideFlecha] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setHideFlecha(window.scrollY > 200); // Cambia 10 por el scroll que prefieras
+            setHideFlecha(window.scrollY > 200);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -76,16 +84,17 @@ function Home() {
 
     return (
         <div className="home-container">
+            <div className="spacer">
+            </div>
             <div className="introduction-grid">
                 <img src={imagen} id="foto-perfil" className={`foto-perfil ${screenSize}`} />
                 <h1 className={`home-punchline ${screenSize}`} >Building the <span className="highlight">future</span>, one <span className="highlight">line</span> at a time.</h1>
                 <p id="line" className={`line ${screenSize}`} >──────────────</p>
-                <p className={`home-description ${screenSize}`} >Hi, I’m <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
+                <p className={`home-description ${screenSize}`} >Hi, I'm <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
                 <Flecha className={`flecha${hideFlecha ? "-hide" : ""}`} />
             </div>
-
             <div className="animation-up">
-                {cuadros.map((params, idx) => (
+                {cuadrosConfig.map((params, idx) => (
                     <CuadroAnimado
                         key={idx}
                         inputScrub={params.inputScrub}
@@ -95,6 +104,12 @@ function Home() {
                     />
                 ))}
             </div>
+            {/* <div id="proyectos-recientes">
+                <h2>Proyectos recientes</h2>
+                <div className="proyectos-grid">
+
+                </div>
+            </div> */}
         </div>
     );
 }
