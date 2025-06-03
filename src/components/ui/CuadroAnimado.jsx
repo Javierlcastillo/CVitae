@@ -2,11 +2,12 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CuadradoSVG from "@/assets/icons/square-solid.svg?react";
 import Cubo from "@/assets/icons/cubo.svg?react";
 gsap.registerPlugin(ScrollTrigger);
 
-function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , startY = "80", startOffset = "0" }) {
+// url de paleta de colores: https://coolors.co/080b0c-182225-29383d
+
+function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , startY = "80" }) {
     const svgRef = useRef();
 
     useGSAP(() => {
@@ -16,7 +17,7 @@ function CuadroAnimado({ inputScrub = 1, inputRotation = 120, inputSize = 80 , s
             duration: 1,
             scrollTrigger: {
                 trigger: ".introduction-grid",
-                start: `2${+ startOffset}px top`,
+                start: `2px top`,
                 endTrigger: ".animation-up",
                 end: "top 40%",
                 toggleActions: "play complete reverse reverse",

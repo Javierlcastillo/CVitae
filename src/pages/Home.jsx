@@ -5,6 +5,7 @@ import imagen from "@/assets/images/yo.jpg";
 import CuadroAnimado from "@/components/ui/CuadroAnimado";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Flecha from "@/assets/icons/flecha.svg?react";
 
 
 function Home() {
@@ -60,9 +61,18 @@ function Home() {
         inputScrub: randomInRange(1, 8),
         inputRotation: randomInRange(100, 600),
         inputSize: tamanoCuadro(randomInRange(40, 90), width),
-        startY: randomInRange(20, 120),
-        startOffset: randomInRange(0, 20) // Desplazamiento vertical inicial aleatorio
+        startY: randomInRange(20, 120)
     }));
+
+    const [hideFlecha, setHideFlecha] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setHideFlecha(window.scrollY > 200); // Cambia 10 por el scroll que prefieras
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="home-container">
@@ -71,7 +81,9 @@ function Home() {
                 <h1 className={`home-punchline ${screenSize}`} >Building the <span className="highlight">future</span>, one <span className="highlight">line</span> at a time.</h1>
                 <p id="line" className={`line ${screenSize}`} >──────────────</p>
                 <p className={`home-description ${screenSize}`} >Hi, I’m <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
+                <Flecha className={`flecha${hideFlecha ? "-hide" : ""}`} />
             </div>
+
             <div className="animation-up">
                 {cuadros.map((params, idx) => (
                     <CuadroAnimado
@@ -80,7 +92,6 @@ function Home() {
                         inputRotation={params.inputRotation}
                         inputSize={params.inputSize}
                         startY={params.startY}
-                        startOffset={params.startOffset}
                     />
                 ))}
             </div>

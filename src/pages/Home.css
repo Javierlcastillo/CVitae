@@ -8,13 +8,14 @@
     display: grid;
     top: 100px;
     width: 100%;
+    min-height: 100vh;
     height: calc(80vh - 100px);
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
 }
 
 .home-punchline {
-    grid-row: 9 / -1;
+    grid-row: 7 / span 3;
     grid-column: 1 / -1;
     font-size: 4rem;
     font-weight: 400;
@@ -24,7 +25,7 @@
 
 .home-description {
     grid-column: 6 / -2;
-    grid-row: 5 / span 2;
+    grid-row: 4 / span 2;
     font-weight: 400;
     font-size: 1.5rem;
     color: #F1F7F6;
@@ -53,6 +54,54 @@
     height: 2px;
     color:  #2cc295;
     opacity: 0.5;
+}
+
+.flecha {
+    fill: #17644D;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    grid-row: 9;
+    grid-column: -2;
+    width: 150px;
+    height: 150px;
+    animation: flecha-bounce 1.5s infinite;
+}
+
+.flecha-hide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    grid-row: 9;
+    grid-column: -2;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+@keyframes flecha-bounce {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(18px);
+        opacity: 0.85;
+    }
+    60% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /*Elementos de la animacion de scroll inicial*/
@@ -191,3 +240,4 @@
     font-weight: 300;
     color: #F1F7F6;
 }
+
