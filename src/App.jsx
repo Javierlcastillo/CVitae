@@ -5,8 +5,8 @@ import AppRoutes from '@/config/AppRoutes.jsx'
 function App() {
   return (
     <div className="App">
-      <AppRoutes />
       <Header />
+      <AppRoutes />
     </div>
   )
 }

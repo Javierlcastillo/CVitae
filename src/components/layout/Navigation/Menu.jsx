@@ -12,7 +12,7 @@ function Menu({bigScreen, menuOpen, setMenuOpen}) {
         console.log("BigScreen value: ", bigScreen);
     }, [bigScreen]);
     return (
-        <div className="menu-container">
+        <div className={`menu-container ${menuOpen ? "show" : ""}`}>
             <div className={`socials full`}>
                 <p className="text"> Follow Me ────── </p>
                 <div className="socials-icons">

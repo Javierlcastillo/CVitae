@@ -91,7 +91,7 @@ function Home() {
                 <h1 className={`home-punchline ${screenSize}`} >Building the <span className="highlight">future</span>, one <span className="highlight">line</span> at a time.</h1>
                 <p id="line" className={`line ${screenSize}`} >──────────────</p>
                 <p className={`home-description ${screenSize}`} >Hi, I'm <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
-                <Flecha className={`flecha${hideFlecha ? "-hide" : ""}`} />
+                <Flecha className={`flecha${hideFlecha ? "-hide" : "-show"}`} />
             </div>
             <div className="animation-up">
                 {cuadrosConfig.map((params, idx) => (

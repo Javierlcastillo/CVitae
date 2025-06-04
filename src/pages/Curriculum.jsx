@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Mail, Phone, Linkedin, MapPin, Calendar, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Curriculum.css';
 
 const Curriculum = () => {
@@ -25,9 +26,9 @@ const Curriculum = () => {
             </div>
             <div className="contact-item">
               <Mail size={18} className="contact-icon" />
-              <a href="mailto:lucaso.javier@gmail.com" className="contact-link">
+              <Link to="mailto:lucaso.javier@gmail.com" className="contact-link">
                 lucaso.javier@gmail.com
-              </a>
+              </Link>
             </div>
             <div className="contact-item">
               <Phone size={18} className="contact-icon" />
@@ -35,14 +36,14 @@ const Curriculum = () => {
             </div>
             <div className="contact-item">
               <Linkedin size={18} className="contact-icon" />
-              <a 
-                href="http://linkedin.com/in/javierluiscastillosolorzano" 
+              <Link 
+                to="http://linkedin.com/in/javierluiscastillosolorzano" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                LinkedIn Profile
-              </a>
+                javierluiscastillosolorzano
+              </Link>
             </div>
           </div>
           <button onClick={handleDownloadCV} className="btn-primary">
@@ -144,15 +145,15 @@ const Curriculum = () => {
                   <span className="text-teal-400 mt-2">•</span>
                   <span>
                     Encargado en el desarrollo, actualización y mantenimiento de la página web{' '}
-                    <a 
-                      href="https://artisan2you.com" 
+                    <Link 
+                      to="https://artisan2you.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-teal-400 hover:text-teal-300 underline inline-flex items-center gap-1"
                     >
                       artisan2you.com
                       <ExternalLink size={14} />
-                    </a>
+                    </Link>
                   </span>
                 </li>
               </ul>
