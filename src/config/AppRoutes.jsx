@@ -9,9 +9,9 @@ function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/curriculum" element={<Curriculum />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/curriculum/" element={<Curriculum />} />
+            <Route path="/profile/" element={<Profile />} />
+            <Route path="/contact/" element={<Contact />} />
         </Routes>
     );
 }

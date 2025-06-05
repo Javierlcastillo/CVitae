@@ -3,14 +3,11 @@
   text-align: center;
 }
 
-.container{
-  padding-top: 80px;
-  padding-left: 50px;
-} 
 
 .page-container {
   padding-top: 88px;
-  margin-left: 40px;
-  margin-right: 30px;
+  position: relative;
+  width: calc(100% - 80px);
+  margin: 40px;
   min-height: 200vh;
 }

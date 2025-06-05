@@ -1,10 +1,10 @@
 import React from "react";
+import MantenimientoSkeleton from "../components/ui/MantenimientoSkeleton";
 
 function Profile() {
     return (
-        <div className="container">
-            <h1>Profile</h1>
-            <p>Profile page content goes here.</p>
+        <div>
+            <MantenimientoSkeleton />
         </div>
     );
 }   

@@ -21,7 +21,7 @@
   /* Header Section */
   .curriculum-header {
     background: linear-gradient(135deg, #2a3539 0%, var(--primary-dark) 100%);
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
   }
   
   .header-content {

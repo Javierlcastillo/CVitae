@@ -1,10 +1,10 @@
 import React from "react";
+import MantenimientoSkeleton from "../components/ui/MantenimientoSkeleton";
 
 function Contact() {
     return (
-        <div className="container">
-            <h1>Contact</h1>
-            <p>Contact page content goes here.</p>
+        <div>
+            <MantenimientoSkeleton />
         </div>
     );
 }

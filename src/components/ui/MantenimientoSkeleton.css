@@ -1,0 +1,199 @@
+/* Animación pulse para el efecto de skeleton */
+.skeleton-container {
+    margin-top: 88px;
+    width: 100vw;
+    height: calc(100vh - 88px);
+}
+
+@keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Asegurar que las clases de Tailwind funcionen correctamente */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .bg-gray-900 {
+    background-color: #1c2628;
+  }
+  
+  .bg-gray-800 {
+    background-color: #2a3539;
+  }
+  
+  .bg-gray-700 {
+    background-color: #1c2628;
+  }
+  
+  .text-white {
+    color: rgb(255 255 255);
+  }
+  
+  .text-teal-400 {
+    color: #2cc295;
+  }
+  
+  .text-gray-400 {
+    color: rgb(156 163 175);
+  }
+  
+  .opacity-40 {
+    opacity: 0.4;
+  }
+  
+  .opacity-60 {
+    opacity: 0.6;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  /* Grid responsive */
+  .grid {
+    display: grid;
+  }
+  
+  @media (min-width: 768px) {
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    .md\:text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .gap-1 {
+    gap: 0.25rem;
+  }
+  
+  /* Flexbox utilities */
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  /* Spacing */
+  .p-8 {
+    padding: 2rem;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .mb-12 {
+    margin-bottom: 3rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  } */
+  
+  /* Typography */
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .font-light {
+    font-weight: 300;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Sizing */
+  .w-full {
+    width: 100%;
+  }
+  
+  .w-16 {
+    width: 4rem;
+  }
+  
+  .w-8 {
+    width: 2rem;
+  }
+  
+  .w-2 {
+    width: 0.5rem;
+  }
+  
+  .w-3\/4 {
+    width: 75%;
+  }
+  
+  .h-16 {
+    height: 4rem;
+  }
+  
+  .h-8 {
+    height: 2rem;
+  }
+  
+  .h-4 {
+    height: 1rem;
+  }
+  
+  .h-3 {
+    height: 0.75rem;
+  }
+  
+  .h-2 {
+    height: 0.5rem;
+  }
+  
+  .max-w-2xl {
+    max-width: 42rem;
+  }

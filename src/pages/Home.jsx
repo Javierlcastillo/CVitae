@@ -10,16 +10,16 @@ import Flecha from "@/assets/icons/flecha.svg?react";
 
 function Home() {
 
-    useGSAP(() => {
-        ScrollTrigger.create({
-            trigger: '.introduction-grid',
-            start: "top top",
-            end: '+=200vh',
-            pin: true,
-            pinSpacing: true,
+//     useGSAP(() => {
+//         ScrollTrigger.create({
+//             trigger: '.introduction-grid',
+//             start: "top top",
+//             end: '+=200vh',
+//             pin: true,
+//             pinSpacing: true,
             
-    });
-}, []);
+//     });
+// }, []);
     const { width } = useWindowSize();
     const getScreenSize = (width) => {
         if (width > 600) return "big";
@@ -93,7 +93,7 @@ function Home() {
                 <p className={`home-description ${screenSize}`} >Hi, I'm <span className="highlight">Javier Luis Castillo</span> — a Computer Science student passionate about AI, web development, and solving real problems with code.</p>
                 <Flecha className={`flecha${hideFlecha ? "-hide" : "-show"}`} />
             </div>
-            <div className="animation-up">
+            {/* <div className="animation-up">
                 {cuadrosConfig.map((params, idx) => (
                     <CuadroAnimado
                         key={idx}
@@ -103,7 +103,7 @@ function Home() {
                         startY={params.startY}
                     />
                 ))}
-            </div>
+            </div> */}
             {/* <div id="proyectos-recientes">
                 <h2>Proyectos recientes</h2>
                 <div className="proyectos-grid">
