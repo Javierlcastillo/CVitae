@@ -2,7 +2,7 @@
     padding-top: 88px;
     position: relative;
     margin-left: 40px;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 .introduction-grid {
     display: grid;
